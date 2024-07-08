@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Starts the example server
+php -S 0.0.0.0:8000 -t api-example/ &
+
 go mod tidy
 GOOS=js GOARCH=wasm go build -o web/main.wasm
 
